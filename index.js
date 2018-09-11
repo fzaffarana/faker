@@ -8,7 +8,7 @@ const originalRequire = Module.prototype.require
 
 class Faker {
   static create (name, module) {
-    Module.prototype.require = function () {
+    Module.prototype.require = () => {
       if (arguments[0] === name) {
         return module
       }
